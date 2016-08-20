@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>		
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+  		<link rel="stylesheet" href="includes/style/style.css">	
+		<title>FollowApp</title>
+	</head>
+	<body id="endShiftReport">
+		<div id="container">
+			<header>
+				<div class="head-cont">
+					<nav class="navbar navbar-inverse">
+						<div class="container-fluid">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+									<div class="hello">היי, יובל</div>
+								</button>
+	      						<a class="navbar-brand" href="index.html"></a>
+	    					</div>
+	    					<div class="collapse navbar-collapse" id="myNavbar">
+							    <ul class="nav navbar-nav navbar-right">
+							        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> צא</a></li>
+							    </ul>
+						    </div>
+	  					</div>
+					</nav>
+				</div>
+			</header>
+			<main>
+				<h1 class="headLine">מורן אבוקן</h1>
+				<section class="mainBox">
+					<section class="fieldNames">
+						<h4>השכמה</h4>
+						<h4>התנהגות</h4>
+						<h4>אירוע חריג</h4>
+						<h4>פירוט</h4>
+						<h4>טיפול תרופתי</h4>
+						<h4>תגובות</h4>
+						<h4>פירוט</h4>
+					</section>
+					<section class="formFields">
+						<form action="shiftUpdates.php" method="post" autocomplete="on" onSubmit="alert('עדכון החניך בוצע בהצלחה!')">
+							<label class="label">
+		  						<input type="time" name="usr_time" required="required">
+		  					</label>
+		  					<label class="label behave">
+								1
+								<input type="range" name="behaveInputName" id="behaveInputId" value="1" min="1" max="10" oninput="behaveOutputId.value = behaveInputId.value" required="required">
+								10
+								<output name="behaveOutputName" id="behaveOutputId">1</output>
+		  					</label>
+		  					<label class="label">
+		  						<input type="radio" class="extEvent" name="extEvent" value="כן" checked/>
+		  						<article class="extEvent">כן</article>
+	  							<input type="radio" class="extEvent" name="extEvent" value="לא"/>
+	  							<article class="extEvent">לא</article>
+		  					</label>
+		  					<label class="label">
+		  						<textarea class="writeText1" name="extrEvent" value="" rows="5" cols="40" required="required"></textarea>
+		  					</label>
+		  					<label class="label">
+		  						<input type="radio" class="medTreatment" name="medTreatment" value="כן" checked/>
+		  						<article class="medTreatment">כן</article>
+	  							<input type="radio" class="medTreatment" name="medTreatment" value="לא"/>
+	  							<article class="medTreatment">לא</article>
+		  					</label>
+		   					<label class="label">
+		  						<input type="radio" class="reaction" name="reaction" value="כן" checked/>
+		  						<article class="reaction">כן</article>
+	  							<input type="radio" class="reaction" name="reaction" value="לא"/>
+	  							<article class="reaction">לא</article>
+		  					</label>
+		  					<label class="label">
+		  						<textarea class="writeText2" name="react" value="" rows="3" cols="40" required="required"></textarea>
+		  					</label>
+		  				    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">שלח</button>
+							<!-- Modal -->
+							<div id="myModal" class="modal fade" role="dialog">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+											<p class="modal-title">אישור</p>
+										</div>
+										<div class="modal-body">
+		        							<p>המידע נשמר בהצלחה</p>
+		        						</div>
+		        						<div class="modal-footer">
+		        							<input name="submit" type="submit" value="סגור" class="btn btn-default" data-submit="Submit">
+		    							</div>
+		  							</div>
+		  						</div>
+							</div>
+						</form>
+					</section>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>

@@ -9,7 +9,7 @@
   		<link rel="stylesheet" href="includes/style/style.css">	
 		<title>FollowApp</title>
 	</head>
-	<body id="index">
+	<body id="addNewStudent">
 		<div id="container">
 			<header>
 				<div class="head-cont">
@@ -31,34 +31,30 @@
 				</div>
 			</header>
 			<main>
+				<h1 class="headLine">הוספת חניך חדש</h1>
 				<section class="mainBox">
-					<a class="box" href="#">
-						<article class="text">המשימות שלי</article>
-						<article class="tasksImg"></article>
-					</a>
-					<a class="box" href="#">
-						<article class="text">החניכים שלי</article>
-						<article class="studImg"></article>
-					</a>
-					<a class="box" href="#">
-						<article class="text">סיכום משמרת</article>
-						<article class="endOfShift"></article>
-					</a>
-					<a class="box" href="#">
-						<article class="text">יומן</article>
-						<article class="calendar"></article>
-					</a>
-					<a class="box" href="#">
-						<article class="text">בקשות חניכים</article>
-						<article class="studentRequests"></article>
-					</a>
-					<a class="box" href="#">
-						<article class="text">בדיקת נוכחות</article>
-						<article class="attendance"></article>
-					</a>
+					<section class="fieldNames">
+						<h4>שם פרטי</h4>
+						<h4>שם משפחה</h4>
+						<h4>ת"ז</h4>
+						<h4>כתובת מגורים</h4>
+						<h4>טלפון</h4>
+						<h4>מוסד לימודים</h4>
+						<h4>פרטי איש קשר מחוץ לפנימיה</h4>
+						<h4>קבוצה</h4>
+					</section>
+					<section class="formFields">
+						<form action="shiftUpdates.php" method="post" autocomplete="on" onSubmit="alert('עדכון החניך בוצע בהצלחה!')">
+							<label class="label">
+								<input type="text" name="firstName" value="" required="required">
+		  					</label>
+		  					<label class="label">
+								<input type="text" name="lastName" value="" required="required">
+		  					</label>
+						</form>
+					</section>
 				</section>
 			</main>
 		</div>
-	
 	</body>
 </html>
